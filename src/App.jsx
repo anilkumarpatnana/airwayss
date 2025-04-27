@@ -1,26 +1,25 @@
 import React from 'react'
 import Header from './landing-page/Header'
-import Banner from './landing-page/Banner'
-import Services from './landing-page/Services'
-import Aboutus from './landing-page/Aboutus'
 import './App.css'
-import Footer from './landing-page/Footer'
-import Gallery from './landing-page/Gallery'
-import Plane from './landing-page/Plane'
+import { Route, Routes } from 'react-router-dom'
+import Home from './navigation-pages/Home'
+import Gallery from './navigation-pages/Gallery'
+import Services from './navigation-pages/Services'
+import AboutUs from './navigation-pages/AboutUs'
 
 
+const App = () => {
 
- const App = () => {
-  
   return (
     <div>
-    <Header />
-    <Plane />
-    <Banner />
-    <Services />
-    <Aboutus />
-    <Gallery />
-    <Footer />
+        <Header />
+        <Routes>
+          <Route path="/Home"  element={<Home />} />
+          <Route path="/Gallery" element={<Gallery />} />
+          <Route path="/Services" element={<Services />} />
+          <Route path="/AboutUs" element={<AboutUs />} />
+
+        </Routes>
     </div>
   )
 }

@@ -199,8 +199,9 @@ transition: transform 0.3s ease-in-out ;
   font-size: 2rem;
 
 }
-
-
+.aboutus{
+  height: 625px;
+}
 @media only screen and (min-width:0px)and (max-width:599px){
   
  .main{
