@@ -1,8 +1,10 @@
 body{
   margin:0;
+  min-height: 100vh; /* Ensure the body has enough height */
   
 
 }
+
 * {
   box-sizing: border-box; /* Include padding and border in the element's total width */
 }
@@ -64,12 +66,12 @@ animation:slideInn 9s ease-in-out infinite;
 }
 @keyframes slideInn {
   
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(1500px); /* adjust the distance */
-    }
+  0% {
+    transform: translateX(-200px); /* start from outside */
+  }
+  100% {
+    transform: translateX(100vw); /* end after full width */
+  }
  
 }
 
@@ -135,34 +137,55 @@ font-weight: bolder;
   transition: transform 1s;
 
 }
-.aboutus{
-  display: inline-flex;
+.aboutus {
+  display: flex;
+  flex-wrap: wrap; /* So it goes to new line on small screens */
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
   background-color: rgb(159, 241, 241);
-  height: 423px;
-  width: 100%;
 }
-.leftimage {
-width:50%;
-}
-.leftimage img{
- width: 100%;
- height:100%;
-}
-.rightcontent{
-  font-size: 1.4rem;
-  font-weight: bolder;
-  margin-bottom: -13px;
-  margin-top:10px;
-  width:50%;
-height:500px;
 
+.leftimage {
+  flex: 1 1 400px;
+  max-width: 600px;
 }
-p{
-  text-align: center;
-  font-size: 2rem;
+
+.leftimage img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
-.aboutus{
-  margin-bottom: 70px;
+
+.rightcontent {
+  flex: 1 1 400px;
+  max-width: 600px;
+  font-size: 1.5rem;
+  color: #333;
+  text-align: left;
+}
+
+.rightcontent h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.rightcontent p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Responsive (Mobile) */
+@media (max-width: 768px) {
+  .aboutus {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .rightcontent {
+    text-align: center;
+  }
 }
 .imagegallery img:hover{
   transform: scale(1.2);
@@ -201,6 +224,21 @@ transition: transform 0.3s ease-in-out ;
 }
 .aboutus{
   height: 625px;
+}
+
+li:hover{
+  color:white;
+  background-color: rgb(0, 3, 5);
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
+  transform: scale(1.2); /* Slightly increase the size */
+  transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.navbar-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Very important! */
 }
 @media only screen and (min-width:0px)and (max-width:599px){
   

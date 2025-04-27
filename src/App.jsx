@@ -12,14 +12,16 @@ const App = () => {
 
   return (
     <div>
-        <Header />
-        <Routes>
-          <Route path="/Home"  element={<Home />} />
-          <Route path="/Gallery" element={<Gallery />} />
-          <Route path="/Services" element={<Services />} />
-          <Route path="/AboutUs" element={<AboutUs />} />
+      <div className="navbar-container">
+        <Header /> {/* This stays fixed during route changes */}
+      </div>
+      <Routes>
+        <Route path="/Home" element={<Home />} />
+        <Route path="/Gallery" element={<Gallery />} />
+        <Route path="/Services" element={<Services />} />
+        <Route path="/AboutUs" element={<AboutUs />} />
 
-        </Routes>
+      </Routes>
     </div>
   )
 }
