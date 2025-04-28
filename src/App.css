@@ -74,12 +74,6 @@ animation:slideInn 9s ease-in-out infinite;
  
 }
 
-.footertitle{
-  align-self: center;
-  font-size: 42px;
-font-style: oblique;
-font-weight: bolder;
-}
 .banner img{
   width: 100%;
 }
@@ -178,6 +172,13 @@ transition: transform 0.3s ease-in-out ;
   width:500px;
   height:300px;
  }
+ .footertitle{
+  align-self: center;
+  font-size: 3rem;
+font-style: oblique;
+font-weight: bolder;
+}
+
 .footer{
   background-color: rgb(9, 9, 9);
   color: white;
@@ -245,11 +246,16 @@ ul a:not(.active):hover{
     display:block;
     justify-items: center;
   }
+  .servicesheading{
+    font-size: 2rem;
+  }
   .service1,.service2,.service3{
     display: block;
     
     width:100%;
-    margin-bottom: 20px;
+  }
+  .captions{
+    font-size: 1.2rem;
   }
   .galleryheader{
     display: block;
@@ -273,6 +279,8 @@ ul a:not(.active):hover{
     background-color: #3A467C;
     width: auto;
     height: auto;
+    margin-top:750px;
+
   }
 
   .leftimage  {
@@ -282,10 +290,33 @@ ul a:not(.active):hover{
 
   .rightcontent {
     width: 100%;
-    font-size: 1rem;
+  }
+  .rightcontent p{
+    font-size: 1.2rem;
 
-
-  }}
+  }
+  .footertitle{
+    align-self: center;
+    font-size: 1.5rem;
+  font-style: oblique;
+  font-weight: bolder;
+  }
+  
+  .footer{
+    background-color: rgb(9, 9, 9);
+    color: white;
+    height:200px;
+    font-size: 0.8rem;
+    align-content: center;
+  }
+  .bottomfooter1{
+    display:grid;
+    grid-template-columns: repeat(3, auto);
+    gap:10px;
+    justify-content:space-around;
+  }
+  
+}
 @media only screen and (min-width:600px)and (max-width:768px)
 {
   .plane{
