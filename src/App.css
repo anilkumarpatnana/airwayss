@@ -4,7 +4,6 @@ body{
   
 
 }
-
 * {
   box-sizing: border-box; /* Include padding and border in the element's total width */
 }
@@ -66,12 +65,12 @@ animation:slideInn 9s ease-in-out infinite;
 }
 @keyframes slideInn {
   
-  0% {
-    transform: translateX(-200px); /* start from outside */
-  }
-  100% {
-    transform: translateX(100vw); /* end after full width */
-  }
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(1500px); /* adjust the distance */
+    }
  
 }
 
@@ -137,55 +136,34 @@ font-weight: bolder;
   transition: transform 1s;
 
 }
-.aboutus {
-  display: flex;
-  flex-wrap: wrap; /* So it goes to new line on small screens */
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
+.aboutus{
+  display: inline-flex;
   background-color: rgb(159, 241, 241);
-}
-
-.leftimage {
-  flex: 1 1 400px;
-  max-width: 600px;
-}
-
-.leftimage img {
+  height: 423px;
   width: 100%;
-  height: auto;
-  border-radius: 10px;
 }
-
-.rightcontent {
-  flex: 1 1 400px;
-  max-width: 600px;
-  font-size: 1.5rem;
-  color: #333;
-  text-align: left;
+.leftimage {
+width:50%;
 }
-
-.rightcontent h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.leftimage img{
+ width: 100%;
+ height:100%;
 }
+.rightcontent{
+  font-size: 1.4rem;
+  font-weight: bolder;
+  margin-bottom: -13px;
+  margin-top:10px;
+  width:50%;
+height:500px;
 
-.rightcontent p {
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
 }
-
-/* Responsive (Mobile) */
-@media (max-width: 768px) {
-  .aboutus {
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .rightcontent {
-    text-align: center;
-  }
+p{
+  text-align: center;
+  font-size: 2rem;
+}
+.aboutus{
+  margin-bottom: 70px;
 }
 .imagegallery img:hover{
   transform: scale(1.2);
@@ -225,20 +203,20 @@ transition: transform 0.3s ease-in-out ;
 .aboutus{
   height: 625px;
 }
-
-li:hover{
+.active{
   color:white;
-  background-color: rgb(0, 3, 5);
-  border-bottom-right-radius: 30px;
-  border-top-left-radius: 30px;
+  background-color: rgb(8, 198, 40);
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 25px;
   transform: scale(1.2); /* Slightly increase the size */
   transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease;
-}
 
-.navbar-container {
-  position: sticky;
-  top: 0;
-  z-index: 1000; /* Very important! */
+
+}
+ul a:not(.active):hover{
+  background-color: white;
+  color: black;
+  border-radius: 30px;
 }
 @media only screen and (min-width:0px)and (max-width:599px){
   
@@ -273,24 +251,6 @@ li:hover{
     width:100%;
     margin-bottom: 20px;
   }
-  .aboutus{
-    display:block;
-
- }
-  .leftimage,.rightcontent{
-    display: block;
-
-  }
-  .leftimage{
-    margin-top:760px;
-    justify-self: center;
-
-  }
-  .rightcontent{
-    margin-top:800px;
-    text-align: center;
-
-  }
   .galleryheader{
     display: block;
   }
@@ -304,23 +264,28 @@ li:hover{
   .nav{
     font-size: 1.5rem;
   }
-  .aboutus{
-    background-color:white;
+  .aboutus {
+    flex-direction: column; /* Stack vertically on small screens */
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #3A467C;
+    width: auto;
+    height: auto;
   }
-  .rightcontent{
-    font-size: 1.1rem;
-    color: rgb(156, 3, 62);
-    font-family: cursive;
+
+  .leftimage  {
+    width: 100%; /* Make image full width */
+    height: auto;
+  }
+
+  .rightcontent {
     width: 100%;
-    position: relative;
-    margin-top:-500px
-   
-  }
-  body{
-    overflow-x: hidden;
-  }
-    
-}
+    font-size: 1rem;
+
+
+  }}
 @media only screen and (min-width:600px)and (max-width:768px)
 {
   .plane{
